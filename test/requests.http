@@ -1,0 +1,83 @@
+### GET /
+GET http://localhost:3000
+
+// media
+
+### GET /media
+GET http://localhost:3000/api/media
+
+### GET /media/:id
+GET http://localhost:3000/api/media/9590
+
+### POST /media
+POST http://localhost:3000/api/media
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="title"
+
+New media title
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="user_id"
+
+1
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="image.jpg"
+Content-Type: image/jpeg
+
+< ./cat.jpg
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### POST /media error
+POST http://localhost:3000/api/media
+
+{"jotain": "jotain"}
+
+### DELETE /media/:id
+DELETE http://localhost:3000/api/media/9590
+
+### PUT /media/:id
+PUT http://localhost:3000/api/media/9590
+content-type: application/json
+
+{
+  "title": "Basement modified",
+  "description": "Some new description",
+}
+
+// user
+
+### GET /user
+GET http://localhost:3000/api/user
+
+### GET /user/:id
+GET http://localhost:3000/api/user/260
+
+### POST /user
+POST http://localhost:3000/api/user
+content-type: application/json
+
+{
+  "user_id": "700",
+  "username": "kayttis",
+  "email": "moi@example.com",
+}
+
+### POST /media error
+POST http://localhost:3000/api/user
+
+{"jotain": "jotain"}
+
+### DELETE /user/:id
+DELETE http://localhost:3000/api/dish/1
+
+### PUT /dish/:id
+PUT http://localhost:3000/api/dish/1
+content-type: application/json
+
+{
+  "dish_name": "testi",
+  "dish_price": "10.00",
+  "description": "testi",
+  "category_id": "1"
+}
