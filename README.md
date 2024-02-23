@@ -4,6 +4,7 @@ Testi tunnukset:
 
 Käyttäjä 1: membernumber: 1002, password: 1234, email: sofia@gmail.com,
 Admin: email: test@test.com, password: 1234, membernumber: 1004
+
 Linkki front-end koodiin: https://github.com/emintt/coffee-shop-frontend-23
 
 Projektissa rakennetaan toimiva ravintola-aiheinen
